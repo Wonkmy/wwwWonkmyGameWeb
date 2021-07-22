@@ -1,0 +1,52 @@
+[
+    {
+        "name":"rpg",
+        "Models": "12",
+        "Animated": "Yes",
+        "Textured": "Yes",
+        "Formats": "FBX, OBJ, Blend",
+        "Released": "July 2021",
+        "Tags": "Medieval",
+        "descrip":"这是一些用于RPG游戏的美术资源，你可以用在你的商业项目或者学习项目中"
+    },
+    {
+        "name":"cars",
+        "Models": "5",
+        "Animated": "No",
+        "Textured": "Yes",
+        "Formats": "FBX",
+        "Released": "July 2021",
+        "Tags": "vehicles",
+        "descrip":"这是一些汽车的美术资源，你可以用在你的商业项目或者学习项目中"
+    },
+    {
+        "name":"tanks",
+        "Models": "5",
+        "Animated": "No",
+        "Textured": "Yes",
+        "Formats": "FBX",
+        "Released": "July 2021",
+        "Tags": "fps",
+        "descrip":"这是一些坦克的美术资源，你可以用在你的商业项目或者学习项目中"
+    },
+    {
+        "name":"ships",
+        "Models": "20",
+        "Animated": "No",
+        "Textured": "Yes",
+        "Formats": "FBX",
+        "Released": "July 2021",
+        "Tags": "vehicles",
+        "descrip":"这是一些游轮的美术资源，你可以用在你的商业项目或者学习项目中"
+    },
+    {
+        "name":"turrets",
+        "Models": "20",
+        "Animated": "No",
+        "Textured": "Yes",
+        "Formats": "FBX",
+        "Released": "July 2021",
+        "Tags": "vehicles",
+        "descrip":"这是一些炮塔资源，可以用在塔防游戏中"
+    }
+]

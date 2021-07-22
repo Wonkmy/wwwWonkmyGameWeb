@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/thumbnails.css">
+    <link rel="stylesheet" href="./assets/css/style_new.css">
+    <!-- <link rel="shortcut icon" href="./assets/images/site/favicon.ico" /> -->
+    <link rel="stylesheet" href="./assets/css/lightbox.min.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/f9d695b775.js" crossorigin="anonymous"></script> -->
+    
+    <script src="./js/index.js"></script>
+
+    <div class="container">
+        <header>
+            <button class="btnHamb hamburger" id="hamburger" onclick="responsiveHamburger()"> <i class="fa fa-bars"></i></button>
+            <div class="nav-menu">
+                <div class="navButtons" id="navButtons-id">
+                    <button class="btn" onClick="alert('建设中......')" ;><i class="fas fa-heart"></i> 进入主站</button>
+                    <button id="namePackTitle" class="btn" onClick="location.reload()" ;><i class="fas fa-chess-rook" ></i> 资源下载首页</button>
+                    <button class="btn" onClick="window.location='https://space.bilibili.com/19224312'" ;><i class="fas fa-frog"></i> 我的教程频道</button>
+                    <button class="btn" onClick="window.location='https://wonkmygame.com'" ;><i class="fas fa-heart"></i> 我的游戏demo展示</button>
+
+                </div>
+                <button class="btn twitter" onclick=" window.open('https://twitter.com/quaternius','_blank')"><i class="fab fa-twitter-square"></i></button>
+            </div>
+            
+            <div id="patreonBanner">
+                <!-- <img src ="./assets/images/site/logo.png" class ="logo"/> -->
+                <nav class="menu-text-center">
+                    <a href="https://wonkmygame.com" style="text-decoration:none" target=blank><img src="./assets/images/site/PatreonBanner.png" /></a>
+    
+                </nav>
+            </div>
+        </header>
+
+        <!-- <div id="patreonBanner">
+            <nav class="menu-text-center">
+                <a href="https://wonkmygame.com" style="text-decoration:none" target=blank><img src="./assets/images/site/PatreonBanner.png" /></a>
+
+            </nav>
+        </div> -->
+
+
+    </div>
+</head>
+
+<body onload="showAssetsInfo(0)">
+    <div class="container">
+        
+        <!--顶部的搜索框-->
+        <div class="wrap">
+            <div class="search">
+                <div class="searchButton">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" id="search" class="searchTerm" placeholder="搜索资源..." autofocus="on" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+        </div>
+
+        <title>WonkmyGame • 免费游戏资源</title>
+
+        <!--可以让搜索引擎检索到的逻辑写法-->
+        <head>
+            <!-- <meta name="title" content="Quaternius • Free Game Assets" />
+            <meta name="description" content="A library of hundreds of free Low Poly 3D Models, using the CC0 License." />
+
+            <meta name="twitter:image" content="./assets/images/fullres/metadata.jpg">
+            <meta name="twitter:card" value="summary_large_image">
+            <meta property="twitter:title" content="Quaternius • Free Game Assets" />
+            <meta property="twitter:description" content="A library of hundreds of free Low Poly 3D Models, using the CC0 License." />
+            <meta property="twitter:site" content="@Quaternius">
+
+
+
+            <meta property="og:type" content="website">
+            <meta property="og:url" content="https://quaternius.com">
+            <meta property="og:site-name" content="Quaternius">
+            <meta property="og:title" content="Quaternius • Free Game Assets">
+            <meta property="og:description" content="A library of hundreds of free Low Poly 3D Models, using the CC0 License.">
+            <meta property="og:image" content="./assets/images/fullres/metadata.jpg">
+            <meta property="og:image:url" content="./assets/images/fullres/metadata.jpg"> -->
+
+        </head>
+
+        <!--分类标签按钮-->
+        <div class="tagGroup">
+            <button class="btnTag" onClick="showAll()" ;>All</button>
+            <button class="btnTag" onClick="setValue('Characters')" ;>Characters</button>
+            <button class="btnTag" onClick="setValue('Nature')" ;>Nature</button>
+            <button class="btnTag" onClick="setValue('Animated')" ;>Animated</button>
+            <button class="btnTag" onClick="setValue('FPS')" ;>FPS</button>
+            <button class="btnTag" onClick="setValue('Buildings')" ;>Buildings</button>
+            <button class="btnTag" onClick="setValue('Medieval')" ;>Medieval</button>
+            <button class="btnTag" onClick="setValue('Space')" ;>Space</button>
+            <button class="btnTag" onClick="setValue('Vehicles')" ;>Vehicles</button>
+        </div>
+
+        <!--卡片内容区-->
+        <div class="cards">
+            <div class="pack">
+                <div class="hvr-sink">
+                    <!-- <a href="#" target="_blank"><img class="gallery-img" border="0" src="./assets/images/fullres/allinonefile.jpg" alt="" /></a> -->
+                    <a href="#" onclick="showAssetsInfo('rpg')"><img class="gallery-img" border="0" src="./assets/images/thumbnails/rpg.jpg" alt="" /></a>
+                    <!--TITLE -->
+                    <div id="PackName" class="PackText">
+                        <!--PUBLIC TAGS 这里是图片右下角的标签,这里写上特定标签后，就可以利用上方的标签按钮筛选了-->
+                    </div>
+                    <div class="tags"></div>
+                    <!--HIDDEN TAGS -->
+                </div>
+
+                <div class="hvr-sink">
+                    <!-- <a href="#" target="_blank"><img class="gallery-img" border="0" src="./assets/images/fullres/allinonefile.jpg" alt="" /></a> -->
+                    <a href="#" onclick="showAssetsInfo('cars')"><img class="gallery-img" border="0" src="./assets/images/thumbnails/cars.jpg" alt="" /></a>
+                    <!--TITLE -->
+                    <div id="PackName" class="PackText">
+                        <!--PUBLIC TAGS 这里是图片右下角的标签,这里写上特定标签后，就可以利用上方的标签按钮筛选了-->
+                    </div>
+                    <div class="tags"></div>
+                    <!--HIDDEN TAGS -->
+                </div>
+
+                <div class="hvr-sink">
+                    <!-- <a href="#" target="_blank"><img class="gallery-img" border="0" src="./assets/images/fullres/allinonefile.jpg" alt="" /></a> -->
+                    <a href="#" onclick="showAssetsInfo('tanks')"><img class="gallery-img" border="0" src="./assets/images/thumbnails/tanks.jpg" alt="" /></a>
+                    <!--TITLE -->
+                    <div id="PackName" class="PackText">
+                        <!--PUBLIC TAGS 这里是图片右下角的标签,这里写上特定标签后，就可以利用上方的标签按钮筛选了-->
+                    </div>
+                    <div class="tags"></div>
+                    <!--HIDDEN TAGS -->
+                </div>
+
+
+                <div class="hvr-sink">
+                    <!-- <a href="#" target="_blank"><img class="gallery-img" border="0" src="./assets/images/fullres/allinonefile.jpg" alt="" /></a> -->
+                    <a href="#" onclick="showAssetsInfo('ships')"><img class="gallery-img" border="0" src="./assets/images/thumbnails/ships.jpg" alt="" /></a>
+                    <!--TITLE -->
+                    <div id="PackName" class="PackText">
+                        <!--PUBLIC TAGS 这里是图片右下角的标签,这里写上特定标签后，就可以利用上方的标签按钮筛选了-->
+                    </div>
+                    <div class="tags"></div>
+                    <!--HIDDEN TAGS -->
+                </div>
+
+                <div class="hvr-sink">
+                    <!-- <a href="#" target="_blank"><img class="gallery-img" border="0" src="./assets/images/fullres/allinonefile.jpg" alt="" /></a> -->
+                    <a href="#" onclick="showAssetsInfo('turrets')"><img class="gallery-img" border="0" src="./assets/images/thumbnails/turrets.jpg" alt="" /></a>
+                    <!--TITLE -->
+                    <div id="PackName" class="PackText">
+                        <!--PUBLIC TAGS 这里是图片右下角的标签,这里写上特定标签后，就可以利用上方的标签按钮筛选了-->
+                    </div>
+                    <div class="tags"></div>
+                    <!--HIDDEN TAGS -->
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div id="assetsInfoEl" class="assetsInfo">
+            <div>
+                <div id="infoImgShow">
+                    <img id="packImgshow" class="indPackImg" alt=""></a>
+                </div>
+    
+                <div class="column small info">
+    
+                    <div class="infoitem">
+                        <i class="fas fa-chess-rook fa-fw" aria-hidden="true"></i>Models <div 
+                        id="text-Models" class="text-right"></div>
+                    </div>
+                    <div class="infoitem"><i class="fas fa-angle-double-right fa-fw" aria-hidden="true"></i> Animated<div
+                        id="text-Animated" class="text-right"></div>
+                    </div>
+                    <div class="infoitem"><i class="fas fa-paint-roller fa-fw" aria-hidden="true"></i> Textured<div
+                        id="text-Textured" class="text-right"></div>
+                    </div>
+                    <div class="infoitem"><i class="fas fa-cube fa-fw" aria-hidden="true"></i> Formats<div
+                        id="text-Formats" class="text-right"></div>
+                    </div>
+                    <div class="infoitem"><i class="far fa-calendar-check fa-fw" aria-hidden="true"></i> Released<div
+                        id="text-Released" class="text-right"></div>
+                    </div>
+                    <div class="infoitem"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Tags
+                        <div id="text-Tags" class="text-right"></div>
+                    </div>
+                    <button class="btn download"
+                        onclick=" window.open('https://drive.google.com/drive/folders/1uJ3N5HfB7jKTseJUNQr3N4YaN0UuEtHk?usp=sharing','_blank')">Download
+                        <i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="row description">
+                <div class="column support ">
+    
+                    <button class="btn patreonBtn" onclick="window.open('https://www.patreon.com/quaternius','_blank')"
+                        ;="">Support on Patreon
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+    
+                    <div class="menu-text-center">If you like the models consider supporting!</div>
+                </div>
+                <div class="column wide">
+                    <div id="packNameText" class="indPackTitle"></div>
+    
+                    <div id="packDesText" class="indPackText">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <footer>
+            <a class="float-left" target="_blank" href="https://space.bilibili.com/19224312">	&copy; 去B站观看视频教程</a>
+            <a class="float-right">Google邮箱wonkmy@gmail.com</a>
+            <a class="float-right">QQ邮箱1589797819@qq.com</a>
+        </footer>
+
+    </div><!--div container-->
+    
+    
+
+    <div id="fade" class="black_overlay" onclick="hideAssetsInfo()"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+    <script>
+        // var vm=new Vue({
+        //     el:"#assetsInfoEl",
+        //     data:{
+        //         assetsInfo:"模型"
+        //     },
+        // });
+    </script>
+    
+</body>
+
+</html>
